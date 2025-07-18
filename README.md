@@ -55,20 +55,21 @@ Swimory는 수영 기록을 남기고, 영상으로 학습하고,
 
 ## 🗂️ 폴더 구조
 
+```
 src/
-├── api/                     # API 요청 모듈
-├── assets/                  # 정적 파일 (이미지, 아이콘 등)
-├── components/              # 재사용 가능한 공통 컴포넌트
-├── constants/               # 상수 정의 (카테고리, 메시지 등)
-├── hooks/                   # 커스텀 훅
-├── layouts/                 # 페이지 템플릿 또는 전체 레이아웃
-├── pages/                   # 라우트 페이지
-├── routes/                  # 라우터 설정 (React Router or Next.js)
-├── store/                   # Zustand 상태 저장소
-├── styles/                  # 전역 스타일 정의
-├── types/                   # 공통 타입 정의
-└── utils/                   # 유틸 함수
-
+├── api/          # API 요청 모듈
+├── assets/       # 정적 파일 (이미지, 아이콘 등)
+├── components/   # 재사용 가능한 공통 컴포넌트
+├── constants/    # 상수 정의 (카테고리, 메시지 등)
+├── hooks/        # 커스텀 훅
+├── layouts/      # 페이지 템플릿 또는 전체 레이아웃
+├── pages/        # 라우트 페이지
+├── routes/       # 라우터 설정 (React Router or Next.js)
+├── store/        # Zustand 상태 저장소
+├── styles/       # 전역 스타일 정의
+├── types/        # 공통 타입 정의
+└── utils/        # 유틸 함수
+```
 ---
 
 ## 🧪 향후 업데이트 예정
