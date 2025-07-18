@@ -14,7 +14,7 @@
 
 ## 🔗 데모 링크
 
-[👉 Swimory 웹사이트 보러가기](https://your-project-url.vercel.app)
+//[👉 Swimory 웹사이트 보러가기](https://your-project-url.vercel.app)
 
 ---
 
