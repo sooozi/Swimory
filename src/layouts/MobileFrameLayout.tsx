@@ -7,7 +7,7 @@ const MobileFrameLayout = () => {
   const { pathname } = useLocation();
 
   // 이 경로들에서는 Header, DockBar 숨김
-  const hiddenLayoutRoutes = ['/', '/intro', '/login'];
+  const hiddenLayoutRoutes = ['/', '/login'];
   const isLayoutHidden = hiddenLayoutRoutes.includes(pathname);
 
   return (

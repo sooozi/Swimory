@@ -5,6 +5,7 @@ import Intro from './pages/Intro';
 import Record from './pages/Record';
 import Index from './pages/Index';
 import Video from './pages/Video';
+import Info from './pages/Info';
 import MobileFrameLayout from './layouts/MobileFrameLayout';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route element={<MobileFrameLayout />}>
           <Route path="/" element={<Intro />} />
           <Route path="/mypage" element={<Index />} />
+          <Route path="/info" element={<Info />} />
           <Route path="/record" element={<Record />} />
           <Route path="/video" element={<Video />} />
         </Route>

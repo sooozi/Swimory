@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowDownIcon } from 'lucide-react';
 
-const Index = () => {
+export default function IndexPage() {
   const navigate = useNavigate();
 
   return (
@@ -16,7 +16,7 @@ const Index = () => {
 
       <div className="mt-8 flex gap-4 z-10">
         <button
-          onClick={() => navigate('/map')}
+          onClick={() => navigate('/info')}
           className="px-6 py-3 rounded-2xl bg-blue-500 hover:bg-blue-600 text-white shadow-md transition"
         >
           수영장 찾기
@@ -35,5 +35,3 @@ const Index = () => {
     </div>
   );
 }
-
-export default Index
