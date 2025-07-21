@@ -1,9 +1,9 @@
 import React from 'react'
 
-const record = () => {
+const Record = () => {
   return (
     <div>record</div>
   )
 }
 
-export default record
+export default Record

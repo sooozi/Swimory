@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowDownIcon } from 'lucide-react';
 
-const index = () => {
+const Index = () => {
   const navigate = useNavigate();
 
   return (
@@ -36,4 +36,4 @@ const index = () => {
   );
 }
 
-export default index
+export default Index
