@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowDownIcon } from 'lucide-react';
 
-export default function IntroPage() {
+const index = () => {
   const navigate = useNavigate();
 
   return (
@@ -16,10 +16,16 @@ export default function IntroPage() {
 
       <div className="mt-8 flex gap-4 z-10">
         <button
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/map')}
           className="px-6 py-3 rounded-2xl bg-blue-500 hover:bg-blue-600 text-white shadow-md transition"
         >
-          카카오 로그인
+          수영장 찾기
+        </button>
+        <button
+          onClick={() => navigate('/record')}
+          className="px-6 py-3 rounded-2xl bg-white text-blue-600 border border-blue-300 hover:bg-blue-100 shadow-sm transition"
+        >
+          기록 시작하기
         </button>
       </div>
 
@@ -29,3 +35,5 @@ export default function IntroPage() {
     </div>
   );
 }
+
+export default index

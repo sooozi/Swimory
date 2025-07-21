@@ -1,5 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
+import DockBar from '../components/DockBar';
 
 const MobileFrameLayout = () => {
   return (
@@ -13,10 +15,13 @@ const MobileFrameLayout = () => {
         shadow-none md:shadow-2xl
         border-none md:border border-gray-200
         overflow-hidden
+        flex flex-col
       ">
-        <div className="w-full h-full overflow-y-auto">
+        <Header />
+        <main className="w-full flex-1 overflow-y-auto">
           <Outlet />
-        </div>
+        </main>
+        <DockBar />
       </div>
     </div>
   );
