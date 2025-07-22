@@ -8,7 +8,7 @@ export default function IntroPage() {
     <div className="w-full h-full flex flex-col items-center justify-center relative">
 
       <div className="absolute inset-0 animate-pulse bg-[url('/wave-pattern.svg')] bg-repeat opacity-10" />
-      <h1 className="text-5xl md:text-5xl font-extrabold text-blue-700 tracking-tight drop-shadow-md z-10">
+      <h1 className="text-5xl md:text-5xl font-extrabold text-primary tracking-tight drop-shadow-md z-10">
         Swimory 🐬
       </h1>
       <p className="mt-4 text-lg md:text-l text-gray-700 font-medium z-10">
@@ -22,6 +22,12 @@ export default function IntroPage() {
         >
           카카오 로그인
         </button>
+        <button className="btn btn-primary">Create Account</button>
+        <button className="btn btn-secondary">Create Account</button>
+        <button className="btn btn-tertiary">Create Account</button>
+        <button className="btn btn-outline">Sign up with Google</button>
+        <button className="btn btn-yellow">Proceed</button>
+        <button className="btn btn-red">Delete</button>
       </div>
 
       <div className="absolute bottom-6 animate-bounce z-10">

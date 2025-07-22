@@ -11,6 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+
+/* ----------------------
+  기본 배경 스타일
+---------------------- */
 .floating-bg {
   position: absolute;
   top: 0;
@@ -27,7 +31,6 @@ code {
               radial-gradient(circle at 70% 70%, #a3d5ec, transparent 60%),
               linear-gradient(to bottom right, #b2eaff, #d1f4f0, #b3ddf5);
 }
-
 
 .floating-bg li {
   position: absolute;
@@ -117,3 +120,147 @@ code {
     opacity: 0;
   }
 }
+
+
+
+/* ----------------------
+  기본 컬러 스타일
+---------------------- */
+:root {
+  --color-primary: #5A81FA;
+  --color-secondary: #2C36BF;
+  --color-dark-gray: #6A6B83;
+  --color-light-gray: #ABB1CE;
+  --color-gray-blue: #C0D8FF;
+  --color-lavender: #F2F5FF;
+  --color-soft-white: #F8F9FD;
+  --color-white: #FFFFFF;
+  --color-red: #FB8889;
+  --color-yellow: #FEDC8B;
+}
+
+/* 텍스트 색상 */
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-dark-gray {
+  color: var(--color-dark-gray);
+}
+.text-light-gray {
+  color: var(--color-light-gray);
+}
+.text-gray-blue {
+  color: var(--color-gray-blue);
+}
+.text-lavender {
+  color: var(--color-lavender);
+}
+.text-soft-white {
+  color: var(--color-soft-white);
+}
+.text-white {
+  color: var(--color-white);
+}
+
+/* 배경 색상 */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-dark-gray {
+  background-color: var(--color-dark-gray);
+}
+.bg-light-gray {
+  background-color: var(--color-light-gray);
+}
+.bg-gray-blue {
+  background-color: var(--color-gray-blue);
+}
+.bg-lavender {
+  background-color: var(--color-lavender);
+}
+.bg-soft-white {
+  background-color: var(--color-soft-white);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+
+/* ----------------------
+  기본 버튼 스타일
+---------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px; /* pill shape */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Primary (Light Blue) */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn-primary:hover {
+  background-color: #3f66e0; /* 살짝 더 진한 파랑 */
+}
+
+/* Secondary (Deep Blue) */
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+.btn-secondary:hover {
+  background-color: #1f2ba0;
+}
+
+/* Tertiary (Gray bg, Blue text) */
+.btn-tertiary {
+  background-color: var(--color-light-gray);
+  color: var(--color-primary);
+}
+.btn-tertiary:hover {
+  background-color: #959bbc; /* 더 진한 회색 */
+}
+
+/* Outline (White bg, Gray border/text) */
+.btn-outline {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  color: var(--color-dark-gray);
+}
+.btn-outline:hover {
+  background-color: #f0f0f0;
+}
+
+/* Yellow */
+.btn-yellow {
+  background-color: var(--color-yellow);
+  color: var(--color-dark-gray);
+}
+.btn-yellow:hover {
+  background-color: #eac066;
+}
+
+/* Red */
+.btn-red {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+.btn-red:hover {
+  background-color: #e76a6a;
+}
+
+

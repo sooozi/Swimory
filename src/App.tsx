@@ -15,10 +15,10 @@ function App() {
         {/* 모든 페이지는 Layout 안에서 렌더링되도록 함 */}
         <Route element={<MobileFrameLayout />}>
           <Route path="/" element={<Intro />} />
-          <Route path="/mypage" element={<Index />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/record" element={<Record />} />
-          <Route path="/video" element={<Video />} />
+          <Route path="/mypage" element={<Index />} /> // 로그인 후 바로 노출되는 페이지 (내 정보)
+          <Route path="/info" element={<Info />} /> 
+          <Route path="/record" element={<Record />} /> // 수영 기록하는 페이지
+          <Route path="/video" element={<Video />} /> // 유튜브 영상 노출 페이지
         </Route>
       </Routes>
     </Router>
