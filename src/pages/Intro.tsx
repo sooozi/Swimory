@@ -5,7 +5,8 @@ export default function IntroPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full h-full bg-gradient-to-b from-sky-100 via-blue-100 to-sky-200 flex flex-col items-center justify-center relative">
+    <div className="w-full h-full flex flex-col items-center justify-center relative">
+
       <div className="absolute inset-0 animate-pulse bg-[url('/wave-pattern.svg')] bg-repeat opacity-10" />
       <h1 className="text-5xl md:text-5xl font-extrabold text-blue-700 tracking-tight drop-shadow-md z-10">
         Swimory 🐬

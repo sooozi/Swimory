@@ -23,9 +23,9 @@ code {
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
-
-  /* 🔵 바다 느낌의 수직 그라데이션 배경 추가 */
-  background: linear-gradient(to bottom, #a2d4f2 0%, #69b7e3 50%, #69b7e3 100%);
+  background: radial-gradient(circle at 30% 30%, #d0f0f9, transparent 60%),
+              radial-gradient(circle at 70% 70%, #a3d5ec, transparent 60%),
+              linear-gradient(to bottom right, #b2eaff, #d1f4f0, #b3ddf5);
 }
 
 

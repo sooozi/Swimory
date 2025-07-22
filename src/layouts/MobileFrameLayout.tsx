@@ -24,9 +24,9 @@ const MobileFrameLayout = () => {
           relative z-10
           w-full h-screen    
           md:w-[375px] md:h-[80vh]
-          bg-white rounded-none 
+          bg-white/60 rounded-none 
           md:rounded-[30px]  
-          shadow-none md:shadow-2xl
+          shadow-none md:shadow-xl
           border-none md:border border-gray-200
           overflow-hidden
           flex flex-col
