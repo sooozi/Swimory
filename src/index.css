@@ -137,6 +137,12 @@ code {
   --color-white: #FFFFFF;
   --color-red: #FB8889;
   --color-yellow: #FEDC8B;
+  /* 기본 텍스트 컬러 (추가) */
+  --color-default-text: #3A3A4B;
+}
+/* 기본 텍스트 색상 전역 지정 */
+body {
+  color: var(--color-default-text);
 }
 
 /* 텍스트 색상 */
@@ -229,7 +235,7 @@ code {
 /* Tertiary (Gray bg, Blue text) */
 .btn-tertiary {
   background-color: var(--color-light-gray);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 .btn-tertiary:hover {
   background-color: #959bbc; /* 더 진한 회색 */
