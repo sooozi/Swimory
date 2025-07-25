@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowDownIcon } from 'lucide-react';
 
 export default function InfoPage() {
   return (
@@ -20,6 +21,16 @@ export default function InfoPage() {
         >
           홈으로 이동
         </a>
+      </div>
+      <button className="btn btn-primary">Create Account</button>
+      <button className="btn btn-secondary">Create Account</button>
+      <button className="btn btn-tertiary">Create Account</button>
+      <button className="btn btn-outline">Sign up with Google</button>
+      <button className="btn btn-yellow">Proceed</button>
+      <button className="btn btn-red">Delete</button>
+
+      <div className="absolute bottom-6 animate-bounce z-10">
+        <ArrowDownIcon className="w-6 h-6 text-blue-400" />
       </div>
     </div>
   );
