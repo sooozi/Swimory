@@ -118,11 +118,40 @@ export default function InfoPage() {
   };
 
   return (
-    <div className="w-full h-screen relative">
-      <div className="absolute inset-0 z-0" ref={mapRef} />
-      <div className="absolute top-4 left-4 z-10 bg-white px-4 py-2 rounded-xl shadow-md text-sm text-gray-700">
+    <div className="w-full h-full relative overflow-hidden">
+      {/* 지도 영역 */}
+      <div ref={mapRef} className="absolute inset-0 z-0" />
+
+      {/* 상단 위치 안내 */}
+      <div className="absolute top-4 left-4 z-10 bg-white px-4 py-2 rounded-xl shadow text-sm text-gray-800">
         {loading ? '수영장 정보를 불러오는 중...' : `반경 2km 내 수영장 ${pools.length}곳`}
       </div>
+
+      {/* 하단 수영장 리스트 패널 */}
+      <div className="absolute bottom-0 left-0 w-full z-20 bg-white rounded-t-2xl p-4 shadow-xl max-h-[45%] overflow-y-auto">
+        <h2 className="text-lg font-semibold text-blue-700 mb-2">근처 수영장</h2>
+        {pools.map((pool, index) => (
+          <div key={index} className="mb-4 p-3 border border-gray-100 rounded-xl shadow-sm">
+            <p className="font-bold text-gray-800">{pool.name}</p>
+            <p className="text-sm text-gray-500">{pool.address}</p>
+            {pool.reserveUrl && (
+              <a
+                href={pool.reserveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 text-blue-500 text-sm underline"
+              >
+                예약하러 가기 →
+              </a>
+            )}
+          </div>
+        ))}
+        {!loading && pools.length === 0 && (
+          <p className="text-gray-500 text-sm">반경 2km 내 수영장이 없어요 🥲</p>
+        )}
+      </div>
+
+      {/* 하단 아이콘 */}
       <div className="absolute bottom-6 animate-bounce z-10 left-1/2 -translate-x-1/2">
         <ArrowDownIcon className="w-6 h-6 text-blue-400" />
       </div>
