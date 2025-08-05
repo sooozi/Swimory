@@ -17,40 +17,59 @@ export default function IndexPage() {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center p-4 relative">
-      {nickname && email ? (
-        <div className="transition-all duration-700 ease-out opacity-100 translate-y-0 text-white text-center">
-          💁🏻‍♀️ 안녕하세요. <span className="font-semibold">{nickname}</span>님!<br />
-          <span className="text-sm opacity-80">{email}</span>
-          <br />
-          {/* ✅ 로그아웃 버튼 */}
-          <button
-            onClick={() => {
-              localStorage.removeItem('nickname');
-              localStorage.removeItem('email');
-              setNickname(null);
-              setEmail(null);
-              navigate('/'); // 홈으로 이동 (필요 시)
-            }}
-            className="mt-2 px-4 py-1 bg-white text-blue-600 text-sm font-medium rounded hover:bg-gray-100"
-          >
-            로그아웃
-          </button>
-        </div>
-      ) : (
-        <div className="transition-all duration-700 ease-out opacity-100 translate-y-0 text-white">
-          💁🏻‍♀️ 안녕하세요. 방문자님!
-        </div>
-      )}
-      
-      {/* 상단 서비스 소개 */}
-      <div className="my-12 text-center px-6 z-10">
-        <p className="text-white text-lg font-medium">수영의 기록과 정보, 한 곳에</p>
-        <p className="mt-2 text-3xl text-white font-bold tracking-tight">Swimory 🐬</p>
-        <p className="mt-2 text-sm text-white opacity-90">서울 수영인을 위한 웹 기반 수영 관리 플랫폼</p>
-        <p className="mt-1 text-xs text-white opacity-80">수영장 정보 · 수영 기록 · 영상 콘텐츠까지 한번에</p>
-      </div>
+      {/* 사용자 정보 */}
+      <section className="w-full overflow-[inherit] max-w-md bg-white rounded-2xl shadow-md px-6 py-6 mb-6 text-center relative">
+        {nickname && email ? (
+          <div className="flex items-center justify-between">
+            <p className="text-sm text-gray-500">💁🏻‍♀️&nbsp;반가워요, 
+              <span className="relative inline-block group">
+                <span className="text-blue-700 font-bold text-sm">&nbsp;{nickname}!</span>
+                {/* 이메일 말풍선 */}
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-[220px] px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none z-10 whitespace-nowrap">
+                  {email}
+                </span>
+              </span>
+            </p>
 
-      <div className="flex flex-col gap-10">
+            <button
+              onClick={() => {
+                localStorage.removeItem('nickname');
+                localStorage.removeItem('email');
+                setNickname(null);
+                setEmail(null);
+                navigate('/');
+              }}
+              className="px-3 py-1 rounded-full bg-white border border-blue-300 text-blue-600 text-xs hover:bg-blue-50 shadow-sm transition"
+            >
+              로그아웃
+            </button>
+          </div>
+        ) : (
+          <>
+            <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-gray-200 flex items-center justify-center text-white text-2xl">
+              👋
+            </div>
+            <p className="text-blue-600 font-medium">안녕하세요. 방문자님!</p>
+          </>
+        )}
+      </section>
+      
+      {/* Swimory 소개 */}
+      <section className="w-full max-w-md bg-white rounded-2xl shadow-md px-6 py-6 text-center mb-20">
+        <h2 className="text-3xl font-extrabold text-blue-700 tracking-tight">Swimory 🐬</h2>
+        
+        <p className="mt-2 text-base font-medium text-gray-700 opacity-0 translate-y-4 animate-fadeUp delay-100">
+          수영의 기록과 정보, 한 곳에
+        </p>
+        <p className="mt-1 text-sm text-gray-500 opacity-0 translate-y-4 animate-fadeUp delay-200">
+          서울 수영인을 위한 웹 기반 수영 관리 플랫폼
+        </p>
+        <p className="mt-1 text-xs text-gray-400 opacity-0 translate-y-4 animate-fadeUp delay-300">
+          수영장 정보 · 수영 기록 · 영상 콘텐츠까지 한눈에
+        </p>
+      </section>
+
+      <div className="flex flex-col gap-10 w-full mb-10">
         <Card
           buttonText="수영장 찾기"
           buttonLink="/info"

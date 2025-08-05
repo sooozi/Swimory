@@ -47,6 +47,9 @@ export default function OauthKakao() {
 
       localStorage.setItem('nickname', nickname);
       localStorage.setItem('email', email);
+
+      // ✅ 로그인 성공 후 마이페이지로 이동
+        navigate('/mypage');
     } catch (e) {
       console.error('❌ 에러 발생:', e);
     }
