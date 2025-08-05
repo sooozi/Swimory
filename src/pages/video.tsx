@@ -13,6 +13,12 @@ export default function VideoPage() {
         Video 페이지입니다.
       </p>
 
+<button className="btn btn-primary">Create Account</button>
+      <button className="btn btn-secondary">Create Account</button>
+      <button className="btn btn-tertiary">Create Account</button>
+      <button className="btn btn-outline">Sign up with Google</button>
+      <button className="btn btn-yellow">Proceed</button>
+      <button className="btn btn-red">Delete</button>
       <div className="mt-8 z-10">
         <a
           href="/"
